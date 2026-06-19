@@ -1,0 +1,26 @@
+{
+  "name": "cortex-plugin-irc-matrix",
+  "version": "1.0.0",
+  "description": "IRC / Matrix Bridge — Cortex agent on IRC and Matrix for open-source communities, issue triage, build triggering",
+  "kind": "esm",
+  "entryPoint": "mod.ts",
+  "runtime": "deno",
+  "author": "CortexPrism",
+  "license": "MIT",
+  "repository": "https://github.com/CortexPrism/cortex-plugin-irc-matrix",
+  "homepage": "https://cortexprism.io/marketplace/plugins/irc-matrix",
+  "capabilities": ["tools", "network:fetch"],
+  "tools": [
+    { "name": "irc_join_channel", "description": "Join IRC/Matrix channel", "params": [] },
+    { "name": "irc_send_message", "description": "Send message to channel", "params": [] },
+    {
+      "name": "irc_triage_issues",
+      "description": "Triage GitHub issues from chat commands",
+      "params": []
+    },
+    { "name": "irc_trigger_build", "description": "Trigger CI build from chat", "params": [] }
+  ],
+  "dependencies": {},
+  "peerDependencies": { "cortex": ">=1.0.0" },
+  "aiDisclosure": { "tools": ["Kilo (DeepSeek) — batch scaffold"], "humanReview": true }
+}
